@@ -6,18 +6,18 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      -name: checkout  repo
-       uses: actions/checkout@v2
+      - name: Checkout  repo
+        uses: actions/checkout@v2
 
-      -name: setup nodejs
-       uses: actions/setup-node@v2
-       with:
-         node-version: 16
+      - name: setup nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
 
-      -name: Download dependencies
-       run: npm install
+      - name: Download dependencies
+        run: npm install
 
-       -name: run tests
+      - name: run tests
         run: npm run tests
         
   
